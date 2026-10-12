@@ -1,0 +1,50 @@
+=== Блок A: иерархии обобщённых классов ===
+ПРИВЕТ
+МИР
+ОТЧЁТ
+LabeledBuffer.Count = 3
+
+--- GuardedBuffer<int> ---
+Добавлено: 5
+TryAdd(5) = True
+Отклонено: -3
+TryAdd(-3) = False
+Добавлено: 100
+TryAdd(100) = True
+Count = 2, AcceptedCount = 2
+
+--- GuardedBuffer<string> ---
+Добавлено: обобщение
+TryAdd("обобщение") = True
+Отклонено:  
+TryAdd(" ") = False
+Count = 1, AcceptedCount = 1
+Счётчики независимы: numbers.AcceptedCount = 2
+
+=== Блок B: обобщённая структура, делегат и метод ===
+Исходная запись: °C: 20
+double → double: °F: 68
+double → string: Категория: тепло
+Исходная запись: Здоровье: 50
+int → int: Здоровье сбонусом: 60
+int → bool: В норме: True
+
+=== Блок C: обобщённые интерфейсы ===
+GetById(2) = Хлеб
+GetById(99) = null
+GetById(1) у клиентов = Алина
+Счётчики независимы: products.Count = 2, customers.Count = 1
+IContainer<Animal>.GetItem() = Dog по имени Шарик
+
+=== Блок D: методы расширения ===
+FindMax на List<int> = 9
+FindMax на пустом List<string> = null
+FindMax на пустом List<int> = 0
+FindMax на List<Product> = Сыр
+Элемент: 5
+Элемент: 9
+Элемент: 2
+Товар: Яблоко (120,00)
+Товар: Хлеб (60,00)
+Товар: Сыр (450,00)
+(пустой список ничего не напечатал)
